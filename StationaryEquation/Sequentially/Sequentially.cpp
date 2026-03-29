@@ -12,7 +12,7 @@ double Uad(double x, double y) { return 0; }
 
 int main()
 {
-    const double SQUARE_MAX = 100.0, h = 1.0, SQUARE_MIN = 0.0;
+    const double SQUARE_MAX = 100.0, h = 0.1, SQUARE_MIN = 0.0;
     const int lmax = 10000;
 
     int n = (int)(SQUARE_MAX / h) + 1, m = (int)(SQUARE_MAX / h) + 1, idx, i, j;
@@ -79,7 +79,7 @@ int main()
 
     tk = omp_get_wtime();
 
-    std::ofstream file("result.dat");
+    std::ofstream file("results.txt");
     for (i = 1; i < 50; i++)
     {
         for (j = 1; j < 50; j++)
